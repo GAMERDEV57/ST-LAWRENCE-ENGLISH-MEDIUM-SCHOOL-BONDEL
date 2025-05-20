@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb; /* Light gray background */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom scrollbar for Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db; /* Tailwind gray-400 */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af; /* Tailwind gray-500 */
+}
+
+
+/* General input field styling for forms */
+.input-field {
+  @apply w-full p-3 border border-gray-300 rounded-lg shadow-sm 
+  focus:ring-2 focus:ring-red-500 focus:border-red-500 
+  transition-all ease-in-out duration-150;
+}
+
+/* Button styling for authentication forms */
+.auth-button {
+  @apply w-full py-3 px-4 rounded-lg text-white font-semibold
+  bg-red-600 hover:bg-red-700 
+  focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2
+  transition-colors duration-150 ease-in-out;
+}
+
+.auth-button:disabled {
+  @apply bg-gray-400 cursor-not-allowed;
+}
+
+/* Grid pattern for hero section (optional) */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Line clamp utility */
+.line-clamp-1 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+.line-clamp-2 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.line-clamp-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+.line-clamp-4 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+.line-clamp-5 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+}
+
+/* For SignOutButton */
+.sign-out-button {
+  @apply px-4 py-2 rounded-lg text-sm font-medium transition-colors;
+  @apply bg-white text-red-700 hover:bg-red-50;
+  /* Or for a more subtle look on dark header: */
+  /* @apply bg-red-500 text-white hover:bg-red-400; */
+}
