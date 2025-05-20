@@ -11,7 +11,7 @@
     "build": "node setup.mjs && vite build && convex deploy"
   },
   "dependencies": {
-    "@convex-dev/auth": "^0.0.80",
+    "@convex-dev/auth": "^0.0.86",
     "@headlessui/react": "^2.2.3",
     "clsx": "^2.1.1",
     "convex": "1.21.1-alpha.1",
